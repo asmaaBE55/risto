@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pescheria Belvga Lugano | Eccellenza Mediterranea</title>
+    <title>Belvga Lugano | Pescheria & Ristorante</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -18,45 +18,55 @@
     <nav id="navbar">
         <a href="#" class="logo">BELV<span>GA</span></a>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#specialita">Specialità</a></li>
+            <li><a href="#menu">Specialità</a></li>
             <li><a href="#prenota">Prenota</a></li>
         </ul>
-        <div class="nav-contact">
-            <a href="tel:+41782296818" class="phone-link">+41 78 229 68 18</a>
-        </div>
         <div class="menu-toggle" id="mobile-menu">
             <span></span><span></span><span></span>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-bg-image"></div> <div class="hero-overlay"></div>
+        <div class="hero-bg" style="background-image: url('2.jpg');"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="rank">#6 Ristorante di Pesce a Lugano</span>
-            <h1>Il Mare in Tavola</h1>
-            <p>La freschezza della nostra pescheria incontra l'eleganza di Lugano.</p>
-            <a href="#prenota" class="btn-primary">Prenota un Tavolo</a>
+            <span class="rank">Dal Mare alla Tavola</span>
+            <h1>L'Essenza del Pesce Fresco</h1>
+            <p>Un viaggio sensoriale tra i sapori del Mediterraneo nel cuore di Lugano.</p>
+            <a href="#prenota" class="btn-primary">Riserva un Tavolo</a>
         </div>
     </header>
 
-    <section id="specialita" class="section">
+    <section id="menu" class="section">
         <div class="container">
             <div class="text-center">
-                <span class="subtitle">Solo Pescato del Giorno</span>
-                <h2 class="title">Le Nostre Eccellenze</h2>
+                <span class="subtitle">Le nostre eccellenze</span>
+                <h2 class="title">Dalla nostra Pescheria</h2>
             </div>
+
             <div class="dishes-grid">
                 <div class="dish-card">
-                    <div class="dish-img"><img src="/1.jpg"></div>
-                    <div class="dish-info"><h3>Grand Plateau Royale</h3><p>Ostriche e frutti di mare selezionati.</p></div>
+                    <div class="dish-img"><img src="rabf-oysters-Ristorante-Pescheria-Belvga.jpg" alt="Ostriche"></div>
+                    <div class="dish-info">
+                        <h3>Plateau Royale</h3>
+                        <p>Ostriche, scampi e frutti di mare su ghiaccio tritato.</p>
+                    </div>
                 </div>
+
                 <div class="dish-card">
-                    <div class="dish-img"><img src="/2.jpg"></div>
-                    <div class="dish-info"><h3>Ricci di Mare</h3><p>L'oro del Mediterraneo servito al momento.</p></div>
+                    <div class="dish-img"><img src="3.jpg" alt="Ricci"></div>
+                    <div class="dish-info">
+                        <h3>Ricci di Mare</h3>
+                        <p>Il sapore autentico e selvaggio del mare, aperti al momento.</p>
+                    </div>
                 </div>
+
                 <div class="dish-card">
-                    <div class="dish-img"><img src="/3.jpg"></div>
-                    <div class="dish-info"><h3>Pescato Selvaggio</h3><p>Dalla vasca alla griglia o al sale.</p></div>
+                    <div class="dish-img"><img src="1.jpg" alt="Pesce Intero"></div>
+                    <div class="dish-info">
+                        <h3>Pescato del Giorno</h3>
+                        <p>Scegli il tuo pesce dalla vasca, cucinato secondo i tuoi desideri.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,27 +74,38 @@
 
     <section id="prenota" class="section booking-section">
         <div class="booking-container">
-            <h2 class="title text-center">Riserva il tuo Posto</h2>
+            <h2 class="title text-center">Prenota la tua Esperienza</h2>
             <form id="bookingForm">
                 <div class="form-row">
-                    <div class="form-group"><label>Nome</label><input type="text" id="nome" name="nome" required></div>
-                    <div class="form-group"><label>Email</label><input type="email" id="email" name="email" required></div>
+                    <div class="form-group">
+                        <label>Nome e Cognome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" placeholder="mario@esempio.com" required>
+                    </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>Data</label><input type="date" id="data" name="data" required></div>
-                    <div class="form-group"><label>Ora</label><input type="time" id="ora" name="ora" required></div>
                     <div class="form-group">
-                        <label>Persone</label>
-                        <select name="persone" id="persone">
-                            <option value="2">2 Persone</option>
-                            <option value="4">4 Persone</option>
-                            <option value="6">6+ Persone</option>
-                        </select>
+                        <label>Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ora</label>
+                        <input type="time" id="ora" name="ora" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Numero Persone</label>
+                        <input type="number" id="persone" name="persone" min="1" max="10" value="2" required>
                     </div>
                 </div>
                 <button type="submit" class="btn-submit" id="submitBtn">Conferma Prenotazione</button>
             </form>
-            <div id="success-msg">✅ Richiesta Inviata! Ti aspettiamo da Belvga.</div>
+            <div id="success-msg">
+                <strong>✅ Prenotazione Inviata!</strong>
+                <p>Ti aspettiamo da Belvga per un'esperienza indimenticabile.</p>
+            </div>
         </div>
     </section>
 
