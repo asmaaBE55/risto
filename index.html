@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pescheria Belvga Lugano | Eccellenza Mediterranea</title>
-    
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -20,25 +17,20 @@
 
     <nav id="navbar">
         <a href="#" class="logo">BELV<span>GA</span></a>
-        
         <ul class="nav-links" id="nav-links">
             <li><a href="#specialita">Specialità</a></li>
             <li><a href="#prenota">Prenota</a></li>
-            <li class="mobile-only"><a href="tel:+41782296818">Chiama Ora</a></li>
         </ul>
-
         <div class="nav-contact">
             <a href="tel:+41782296818" class="phone-link">+41 78 229 68 18</a>
         </div>
-
         <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
     </nav>
 
     <header class="hero">
+        <div class="hero-bg-image"></div> <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="rank">#6 Ristorante di Pesce a Lugano</span>
             <h1>Il Mare in Tavola</h1>
@@ -53,36 +45,18 @@
                 <span class="subtitle">Solo Pescato del Giorno</span>
                 <h2 class="title">Le Nostre Eccellenze</h2>
             </div>
-
             <div class="dishes-grid">
                 <div class="dish-card">
-                    <div class="dish-img">
-                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=800" alt="Crudité">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Grand Plateau Royale</h3>
-                        <p>Ostriche pregiate, scampi e frutti di mare selezionati.</p>
-                    </div>
+                    <div class="dish-img"><img src="/1.jpg"></div>
+                    <div class="dish-info"><h3>Grand Plateau Royale</h3><p>Ostriche e frutti di mare selezionati.</p></div>
                 </div>
-
                 <div class="dish-card">
-                    <div class="dish-img">
-                        <img src="https://images.unsplash.com/photo-1563805042-7684c819c1cb?auto=format&fit=crop&q=80&w=800" alt="Ricci">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Ricci di Mare</h3>
-                        <p>L'oro del Mediterraneo, aperti e serviti al momento.</p>
-                    </div>
+                    <div class="dish-img"><img src="/2.jpg"></div>
+                    <div class="dish-info"><h3>Ricci di Mare</h3><p>L'oro del Mediterraneo servito al momento.</p></div>
                 </div>
-
                 <div class="dish-card">
-                    <div class="dish-img">
-                        <img src="https://images.unsplash.com/photo-1551739440-5dd934d3a94a?auto=format&fit=crop&q=80&w=800" alt="Branzino">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Pescato Selvaggio</h3>
-                        <p>Dalla nostra vasca direttamente alla griglia o al sale.</p>
-                    </div>
+                    <div class="dish-img"><img src="/3.jpg"></div>
+                    <div class="dish-info"><h3>Pescato Selvaggio</h3><p>Dalla vasca alla griglia o al sale.</p></div>
                 </div>
             </div>
         </div>
@@ -91,53 +65,31 @@
     <section id="prenota" class="section booking-section">
         <div class="booking-container">
             <h2 class="title text-center">Riserva il tuo Posto</h2>
-            <p class="text-center mb-40">Prenota ora per assicurarti la migliore selezione.</p>
-            
             <form id="bookingForm">
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>Nome Completo</label>
-                        <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="email" name="email" placeholder="mario@email.com" required>
-                    </div>
+                    <div class="form-group"><label>Nome</label><input type="text" id="nome" name="nome" required></div>
+                    <div class="form-group"><label>Email</label><input type="email" id="email" name="email" required></div>
                 </div>
-
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>Data</label>
-                        <input type="date" id="data" name="data" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Ora</label>
-                        <input type="time" id="ora" name="ora" required>
-                    </div>
+                    <div class="form-group"><label>Data</label><input type="date" id="data" name="data" required></div>
+                    <div class="form-group"><label>Ora</label><input type="time" id="ora" name="ora" required></div>
                     <div class="form-group">
                         <label>Persone</label>
                         <select name="persone" id="persone">
                             <option value="2">2 Persone</option>
-                            <option value="3">3 Persone</option>
                             <option value="4">4 Persone</option>
-                            <option value="5">5+ Persone</option>
+                            <option value="6">6+ Persone</option>
                         </select>
                     </div>
                 </div>
-
                 <button type="submit" class="btn-submit" id="submitBtn">Conferma Prenotazione</button>
             </form>
-
-            <div id="success-msg">
-                <strong>✅ Richiesta Inviata!</strong>
-                <p>Ti abbiamo inviato una conferma via email. Ti aspettiamo da Belvga.</p>
-            </div>
+            <div id="success-msg">✅ Richiesta Inviata! Ti aspettiamo da Belvga.</div>
         </div>
     </section>
 
     <footer>
         <p>Via G.B. Pioda 4, Lugano | <strong>+41 78 229 68 18</strong></p>
-        <p style="opacity: 0.5; margin-top: 10px;">&copy; 2026 Ristorante Pescheria Belvga</p>
     </footer>
 
     <script src="script.js"></script>
